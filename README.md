@@ -4,7 +4,7 @@
 # Commodore 64 technical documentetion project
 Technical documentation about the Commodore 64, mainly emulation-oriented.
 In writing a Commodore 64 emulator there is much documentation to find, but not always all at the same place and not always unambiguous.
-This is an effort to document a few of the less documented but important details of the hardware but needed to be able to write an accurate emulation.
+This is an effort to document a few of the less documented but important details of the hardware needed to be able to write an accurate emulation.
 
 
 ---
