@@ -1,4 +1,4 @@
-# MOS 6526 CIA
+# MOS 6526 CIA (timers)
 
 ## Timers
 
