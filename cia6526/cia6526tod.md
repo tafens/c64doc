@@ -18,7 +18,7 @@ The clock also has an alarm function that can raise an alarm and an interrupt re
 | B   | TOD HR    | Hours + AM/PM          |    PM |     0 |     0 |   HH1 |   HL8 |   HL4 |   HL2 |   HL1 |
 |     |           |                        |       |       |       |       |       |       |       |       |
 | D   | IMR/ICR   | Interrupt mask/control |       |       |       |       |       | ALARM |       |       |
-|     |           |                         |         |         |         |         |         |         |         |         |
+|     |           |                        |       |       |       |       |       |       |       |       |
 | E   | CRA       | Control register A     | TODIN |       |       |       |       |       |       |       |
 | F   | CRB       | Control register B     | ALARM |       |       |       |       |       |       |       |
 
