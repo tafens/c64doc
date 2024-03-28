@@ -26,7 +26,7 @@ The TOD clock has four registers of its own and one bit in each control register
 * The 10THS register holds one digit  for the tenths of seconds count (4 bits).
 * The SEC   register holds two digits for the seconds count (3 + 4 bits).
 * The MIN   register holds two digits for the minutes count (3 + 4 bits).
-* The HR    register holds one digit  for the hours count (3 bits) and an AM/PM flag (1 bit).
+* The HR    register holds two digits for the hours count (1 + 3 bits) and an AM/PM flag (1 bit).
 * The ALARM bit in the interrupt control register indicates that the current time matches the set alarm time.
 * The TODIN bit in control register A sets the expected input frequency on the TOD pin (0=60Hz, 1=50Hz).
 * The ALARM bit in control register B sets the target for writes to the TOD time registers (0=set alarm, 1=set clock).
