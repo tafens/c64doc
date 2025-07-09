@@ -32,8 +32,8 @@ What we will need to know in order to calculate the counter value is:
 - how many revolutions of the tape spool is required to advance the counter by one:<br/>
   (belt/gear ratio)
 
-These valuse will need to be in the same and corresponding base units (i.e. s, m, m/s)
-to keep the calculation consistent and avoid adding extra maths operatioins for
+These values will need to be in the same and corresponding base units (i.e. s, m, m/s)
+to keep the calculation consistent and avoid adding extra maths operations for
 conversion between them:
 
 - **t** = elapsed time (s);<br/>
@@ -67,7 +67,7 @@ Total length of tape wound up on the spool at time ```t```:
 L(t) = v*t
 ```
 
-As described above, it is not as simple as dividing this by the cirumference of the tape spool,
+As described above, it is not as simple as dividing this by the circumference of the tape spool,
 because as the tape winds up, each additional revolution wraps around a slightly larger radius.
 Looking at one single revolution first, the length of the tape that is wound up on the spool by
 the ```n```:th *single* revolution is:
@@ -115,10 +115,10 @@ L = pi*(d*N^2 + 2*r*N - d*N)
     ----------(2)-----------
 ```
 
-Because ```L = v*t```, substitutïng ```v*t``` for ```L``` makes it possible to rearrange
+Because ```L = v*t```, substituting ```v*t``` for ```L``` makes it possible to rearrange
 this to a quadratic equation in the form of ```a*x^2 + b*x + c = 0```; first rearranging
 to get the parts ```a*x^2``` and ```b*x``` collected as single expressions, and then
-rearannging to get ```c``` on the same side and have everything equal zero:
+rearranging to get ```c``` on the same side and have everything equal zero:
 
 ```
 v*t = pi*(d*N^2 + 2*r*N - d*N)  =  pi*(d*N^2 + (2r-d)*N)  =  pi*d*N^2 + pi*(2r-d)*N
@@ -229,7 +229,7 @@ L(n) = pi*(d*n +t*n^2)
 (as posted by user Velktron on the Tapeheads.Net forum in post #8 in the thread:
  https://www.tapeheads.net/threads/cassette-tape-thickness.52351/)
 
-Sustituting for the constants ```r``` (empty spool radius), ```d``` (tape thickness), and ```v``` (tape speed),
+Substituting for the constants ```r``` (empty spool radius), ```d``` (tape thickness), and ```v``` (tape speed),
 as used above, it becomes:
 ```
 L = pi*(2*r*N +d*n^2)
@@ -259,7 +259,7 @@ N = sqrt(C1+C2*t)-C3
 --------(5)---------
 ```
 
-The belt/gear ratio remainis the same, and again the counter value can be calculated using:
+The belt/gear ratio remains the same, and again the counter value can be calculated using:
 ```
 C = f*N
 ```
