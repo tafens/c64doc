@@ -13,11 +13,11 @@ it and moves that too along one step, advancing it by one and so on.
 
 ## Calculating the counter value mathematically
 
-Calculating where the counter at is a little bit tricky, because as the tape spool fills
-up, the actual radius of it increases, making it rotate slower by each revolution. This is
-because the tape moves at a constant speed when played, and with the tape speed constant,
-the spool must slow down as it fills up and the radius increases. The increase in radius
-for each one revolution will be the thickness of the tape.
+Calculating where the counter is at, is a little bit tricky. This is because as the tape spool
+fills up, the actual radius of it increases, making it rotate slower by each revolution. As the
+counter is driven by the spool, and tape moves at a constant speed when played, the spool must
+slow down as it fills up and the radius increases. This increase in radius for each one
+revolution will be the thickness of the tape.
 
 Additionally, the belt and gears that drives the counter from the spool will provide a
 ratio for how much the counter increases for each revolution of the spool. The belt/gear
@@ -48,12 +48,12 @@ conversion between them:
           Tape thickness varies depending on the length of the tape in the cassette,
           ranging from 16-18 um in C60 cassettes and shorter, 11-12 um in C90, and
           even thinner in longer, less common tapes such as C120; for the purpose
-          of general calculation we assume 12 um as the most common tape stock used.<br/>
-          **0.000012 m**
+          of general calculation we assume 11 um as the most common tape stock used.<br/>
+          **0.000011 m**
 
 - **r** = empty spool radius (m);<br/>
           For most cassettes, the empty spool diameter is 22 mm, making the radius 11 mm.<br/>
-          **0.0011 m**
+          **0.011 m**
 
 - **f** = belt/gear ratio;<br/>
           This is how much the counter increases for each revolution of the tape spool.
@@ -212,7 +212,7 @@ C = f*(sqrt(C1+C2*t)-C3)
 ```
 
 The time ```t``` will be calculated as the number of cycles total passed under the tape head,
-divided by the cycles per seconds of the tape image, which is part of the TAP format.
+divided by the cycles per second of the tape image, which is part of the TAP format.
 
 **DONE!**
 
@@ -226,8 +226,8 @@ using tape of thickness *t* will accumulate in *n* revolutions starting from zer
 ```
 L(n) = pi*(d*n +t*n^2)
 ```
-(as posted by user Velktron on the Tapeheads.Net forum in post #8 in the thread:
- https://www.tapeheads.net/threads/cassette-tape-thickness.52351/)
+(as posted by user Velktron on the Tapeheads.Net forum in post #8 in the thread
+"Cassette Tape Thickness")
 
 Substituting for the constants ```r``` (empty spool radius), ```d``` (tape thickness), and ```v``` (tape speed),
 as used above, it becomes:
@@ -269,3 +269,11 @@ Which becomes:
 C = f*(sqrt(C1+C2*t)-C3)
 ----------(6)-----------
 ```
+
+
+## Sources
+- Wikipedia, article "Audio tape specifications", sub section "Compact audio cassettes":<br/>
+   https://en.m.wikipedia.org/wiki/Audio_tape_specifications
+
+- Tapeheads.Net, thread "Cassette Tape Thickness":<br/>
+  https://www.tapeheads.net/threads/cassette-tape-thickness.52351/
