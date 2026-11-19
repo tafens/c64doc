@@ -57,7 +57,7 @@ The basis of the count is the input 50/60Hz pulse on the TOD pin. This pulse adv
 * Hours
     * If the hours high and low digits matches exactly 09 before an increment, they will be set to 10
     * If the hours high and low digits matches exactly 12 before an increment, they will be set to 01
-    * After an increment, if the hours high and low digits now matches exactly 12, the AP/PM bit is toggled
+    * After an increment, if the hours high and low digits now matches exactly 12, the AM/PM bit is toggled
 
 The clock will always count following these rules, and as long as it is loaded with valid values it will always represent the time correctly. But the digits are actually binary registers (one per digit) and they will behave as such. The tenths, seconds low, minutes low, and hours low are 4-bit registers that each can hold values from $0-$F, and the seconds high, and minutes high are 3-bit registers that can hold values from $0-$7. Any of those values can be written to them respectively and be read back, and when incremented past their maximum they will just wrap around to zero.
 
