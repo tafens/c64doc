@@ -1,4 +1,4 @@
-# MOS 6569 VIC (cycles)
+# MOS 6569 VIC (frame)
 
 ## Video display
 Vertical blanking occurs every frame after the last visible line until the start of the first visible line of the next frame.
@@ -36,3 +36,24 @@ the 6567r8 restarts at coordinate $18C in both halves of cycle 63 and the first 
 (the range of $18C-$18F is reset three times and thus repeated four times in total),
 the 6569 only goes up to coordinate $1F7 before the reset point in cycle 13 is reached.
 
+### Border
+
+The border is turned on/off by comparison of specific comparison values with the current horizontal position.
+The comparison values are hard coded to the CSEL and RSEL bits, and all VIC versions share the same comparison values.
+
+The horizontal border (left/right) comparison values:
+
+| CSEL | Left border | Right border |
+|:-----|------------:|-------------:|
+| 0    |   31 ($01F) |   335 ($14F) |
+| 1    |   24 ($018) |   344 ($158) |
+
+The vertical border (top/bottom) comparison values:
+
+| RSEL | Top border | Bottom border |
+|:-----|-----------:|--------------:|
+| 0    |   55 ($37) |     247 ($F7) |
+| 1    |   51 ($33) |     251 ($FB) |
+
+Trickery can be achieved by manipulating these bits with exact timing to make the VIC either "forget"
+to turn the border on or off.
